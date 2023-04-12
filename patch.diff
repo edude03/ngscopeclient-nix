@@ -1,0 +1,13 @@
+diff --git a/src/ngscopeclient/Dialog.cpp b/src/ngscopeclient/Dialog.cpp
+index 6db937d..51c341d 100644
+--- a/src/ngscopeclient/Dialog.cpp
++++ b/src/ngscopeclient/Dialog.cpp
+@@ -207,7 +207,7 @@ void Dialog::HelpMarker(const string& header, const vector<string>& bullets)
+ 		ImGui::PushTextWrapPos(ImGui::GetFontSize() * 50);
+ 		ImGui::TextUnformatted(header.c_str());
+ 		for(auto s : bullets)
+-			ImGui::BulletText(s.c_str());
++			ImGui::BulletText("%s", s.c_str());
+ 		ImGui::PopTextWrapPos();
+ 		ImGui::EndTooltip();
+ 	}
